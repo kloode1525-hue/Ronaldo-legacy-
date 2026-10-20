@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CR7 — THE LEGACY</title>
+<meta name="description" content="An independent fan tribute to Cristiano Ronaldo’s career.">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#090909;--gold:#C8A85A;--card:#111;--txt:#fff;--mut:#a8a8a8;--line:rgba(200,168,90,.28);--f:'Inter',system-ui,sans-serif;color-scheme:dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+[dir=rtl]{--f:'Cairo','Inter',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{background:var(--bg);color:var(--mut);font:400 1.05rem/1.7 var(--f);overflow-x:hidden}
+h1,h2,h3{color:var(--txt);line-height:1.15}a{color:var(--gold)}img{display:block;max-width:100%;height:auto}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.skip{position:absolute;inset-inline-start:-999px}.skip:focus{inset-inline-start:8px;top:8px;background:var(--gold);color:#000;padding:8px;z-index:99}
+.wrap{max-width:1160px;margin:auto;padding-inline:20px}
+.sec{padding-block:clamp(64px,10vw,120px)}
+.eb{color:var(--gold);letter-spacing:.3em;text-transform:uppercase;font-size:.75rem;font-weight:600}
+[dir=rtl] .eb{letter-spacing:0}
+h2{font-size:clamp(1.9rem,4.5vw,3rem);margin:8px 0 36px}
+h2::after{content:"";display:block;width:64px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin-top:16px}
+[dir=rtl] h2::after{background:linear-gradient(270deg,var(--gold),transparent)}
+.note{font-size:.9rem;margin:-20px 0 24px}
+.nav{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;gap:16px;padding:calc(12px + env(safe-area-inset-top,0px)) 20px 12px;background:rgba(9,9,9,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.brand{color:var(--txt);font-weight:800;letter-spacing:.12em;text-decoration:none;margin-inline-end:auto}.brand span{color:var(--gold)}
+.menu{display:flex;gap:22px}.menu a{color:var(--mut);text-decoration:none;font-size:.88rem;transition:.3s}.menu a:hover{color:var(--gold)}
+.lang,.btn{font:600 .9rem var(--f);color:var(--gold);background:none;border:1px solid var(--gold);padding:9px 20px;border-radius:2px;cursor:pointer;text-decoration:none;transition:.35s;display:inline-block}
+.lang:hover,.btn:hover{background:var(--gold);color:#000;box-shadow:0 0 28px rgba(200,168,90,.35)}
+.btn{padding:14px 34px;background:var(--gold);color:#000}.btn:hover{background:#e0c378}
+.burger{display:none;background:none;border:0;padding:8px;cursor:pointer}.burger i{display:block;width:24px;height:2px;background:var(--gold);margin:5px 0}
+@media(max-width:900px){.burger{display:block;order:3}.menu{position:fixed;inset:64px 0 auto;flex-direction:column;background:#0d0d0d;padding:20px;border-bottom:1px solid var(--line);display:none}.menu.open{display:flex}.menu a{font-size:1.1rem;padding:8px 0}}
+.hero{min-height:100svh;display:grid;align-items:end;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,9,9,.35) 0,rgba(9,9,9,.15) 40%,var(--bg) 96%),linear-gradient(90deg,rgba(9,9,9,.85),transparent 70%),var(--hero,#141414) center/cover;animation:zoom 18s ease-out both}
+[dir=rtl] .hero-bg{background:linear-gradient(180deg,rgba(9,9,9,.35) 0,rgba(9,9,9,.15) 40%,var(--bg) 96%),linear-gradient(270deg,rgba(9,9,9,.85),transparent 70%),var(--hero,#141414) center/cover}
+.hero-in{position:relative;padding-block:150px 100px}
+.hero h1{font-size:clamp(2.8rem,9.5vw,7rem);font-weight:800;letter-spacing:.01em;animation:up 1.1s both}
+.tag{font:600 clamp(1.3rem,3vw,2.1rem) 'Cairo',sans-serif;color:var(--gold);margin:18px 0 12px;animation:up 1.1s .15s both}
+.sub{max-width:520px;margin-bottom:34px;animation:up 1.1s .3s both}
+.hero .btn{animation:up 1.1s .45s both}
+@keyframes up{from{opacity:0;transform:translateY(26px)}}@keyframes zoom{from{transform:scale(1.08)}}
+.tl{display:grid;grid-template-columns:1.1fr 1fr;gap:0;margin-top:20px;border:1px solid var(--line);background:var(--card);overflow:hidden}
+.tl .ph{aspect-ratio:8/5}.tl .tx{padding:clamp(22px,4vw,44px);align-self:center}
+.tl .yrs{color:var(--gold);font-weight:800;font-size:1.5rem}.tl h3{font-size:1.9rem;margin:6px 0 12px}
+@media(max-width:760px){.tl{grid-template-columns:1fr}}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:12px;scrollbar-width:thin}
+.tabs button{flex:none;font:600 .85rem var(--f);color:var(--mut);background:none;border:1px solid var(--line);padding:10px 16px;cursor:pointer;transition:.3s;text-align:center}
+.tabs button:hover{border-color:var(--gold);color:var(--txt)}.tabs [aria-selected=true]{color:#000;background:var(--gold);border-color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:22px}
+.card{text-align:start;font:inherit;color:inherit;background:var(--card);border:1px solid var(--line);cursor:pointer;transition:.4s;display:block;width:100%;overflow:hidden;padding:0}
+article.card{cursor:default}
+.card:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 14px 40px rgba(200,168,90,.12)}
+.ph{position:relative;overflow:hidden;background:#141414}.ph img{width:100%;aspect-ratio:8/5;object-fit:cover;transition:transform .8s}
+.card:hover .ph img{transform:scale(1.06)}
+.ph em{position:absolute;inset-block-end:10px;inset-inline-start:12px;font:800 2rem var(--f);font-style:normal;color:var(--gold);text-shadow:0 2px 12px #000}
+.ph .pl{position:absolute;inset-block-start:10px;inset-inline-end:10px;font-size:.68rem;background:rgba(0,0,0,.65);color:var(--mut);padding:2px 8px;border:1px solid var(--line)}
+.cb{padding:20px 22px 22px}.card h3{font-size:1.12rem;margin-bottom:4px}.cb small{display:block;margin-top:8px}
+.flag{color:#e6b84a;font-size:.8rem}.ok{color:#7fc79a;font-size:.8rem}
+.stats{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}.stats .card{cursor:default;padding:26px}.stats .card:hover{transform:none}
+.stats b{display:block;color:var(--gold);font-size:2.6rem;font-weight:800;line-height:1.1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 14px}.chips span{font-size:.8rem;min-width:84px;color:var(--txt)}
+.chips button{font:600 .82rem var(--f);color:var(--mut);background:none;border:1px solid var(--line);padding:6px 14px;cursor:pointer;border-radius:30px;transition:.3s}
+.chips button:hover{border-color:var(--gold);color:var(--txt)}.chips [aria-pressed=true]{background:var(--gold);color:#000;border-color:var(--gold)}
+.foot{border-top:1px solid var(--line);padding-block:64px;font-size:.9rem;background:linear-gradient(180deg,#0d0d0d,var(--bg))}.foot ul{padding-inline-start:20px;margin:12px 0 24px;columns:2}
+dialog{background:var(--card);color:var(--mut);border:1px solid var(--gold);padding:32px;max-width:480px;width:calc(100% - 40px);margin:auto}
+dialog::backdrop{background:rgba(0,0,0,.8)}dialog h3{font-size:1.5rem;margin-bottom:10px}dialog p{margin-bottom:14px}
+.x{position:absolute;inset-block-start:8px;inset-inline-end:12px;background:none;border:0;color:var(--gold);font-size:1.8rem;cursor:pointer}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip"></a>
+<header class="nav" id="top">
+  <a class="brand" href="#top">CR7<span>·</span>LEGACY</a>
+  <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="menu" data-i18n-aria="menu"><i></i><i></i><i></i></button>
+  <nav id="menu" class="menu" aria-label="Main"></nav>
+  <button class="lang" id="lang" type="button"></button>
+</header>
+<main id="main">
+  <section class="hero" aria-label="CR7 — THE LEGACY">
+    <div class="hero-bg" id="hero-bg"></div>
+    <div class="wrap hero-in">
+      <p class="eb" data-i18n="heroEyebrow"></p>
+      <h1>CR7 — THE LEGACY</h1>
+      <p class="tag" lang="ar" dir="rtl">ما وراء الأرقام، حكاية إرث</p>
+      <p class="sub" data-i18n="heroSub"></p>
+      <a class="btn" href="#timeline" data-i18n="explore"></a>
+    </div>
+  </section>
+  <section id="timeline" class="wrap sec"><p class="eb">01</p><h2 data-i18n="secTimeline"></h2><div id="timeline-box"></div></section>
+  <section id="trophies" class="wrap sec"><p class="eb">02</p><h2 data-i18n="secTrophies"></h2><p class="note" data-i18n="clickHint"></p><div id="trophies-grid" class="grid"></div></section>
+  <section id="portugal" class="wrap sec"><p class="eb">03</p><h2 data-i18n="secPortugal"></h2><div id="portugal-grid" class="grid"></div></section>
+  <section id="moments" class="wrap sec"><p class="eb">04</p><h2 data-i18n="secMoments"></h2><div id="moments-grid" class="grid"></div></section>
+  <section id="stats" class="wrap sec"><p class="eb">05</p><h2 data-i18n="secDash"></h2><p class="note"><span data-i18n="updated"></span>: <time id="updated"></time></p><div id="stats-grid" class="grid stats"></div></section>
+  <section id="gallery" class="wrap sec"><p class="eb">06</p><h2 data-i18n="secGallery"></h2><div id="filters"></div><p class="note" id="count" aria-live="polite"></p><div id="gallery-grid" class="grid"></div></section>
+</main>
+<footer class="foot"><div class="wrap"><h3 data-i18n="secSources"></h3><ul id="sources"></ul><p class="note" style="margin:0 0 10px" data-i18n="imgNote"></p><p data-i18n="disclaimer"></p></div></footer>
+<dialog id="dlg"><button class="x" id="dlg-x" type="button" data-i18n-aria="close">×</button><h3 id="dlg-t"></h3><p id="dlg-d"></p><a id="dlg-s" target="_blank" rel="noopener"></a></dialog>
+<script>
+const W="https://en.wikipedia.org/wiki/Cristiano_Ronaldo",U="https://www.uefa.com",TM="https://www.transfermarkt.com/cristiano-ronaldo/profil/spieler/8198";
+const AFP="https://www.jamaicaobserver.com/2025/06/08/portugal-beat-spain-penalties-win-nations-league";
+/* ALL CONTENT HERE. {en,ar} pairs. status:"ok" = confirmed in sources checked on the updated date; "verify" = not yet confirmed.
+   art = label drawn on the placeholder artwork. img = optional URL of an authorized image (leave out to use the placeholder). */
+const D={updated:"2026-10-20",
+i18n:{en:{skip:"Skip to content",menu:"Menu",close:"Close",heroEyebrow:"Independent fan tribute",heroSub:"From Funchal to the world’s biggest stages — a career told through its clubs, trophies and defining nights.",explore:"Explore the Legacy",
+secTimeline:"Career Timeline",secTrophies:"Trophy Gallery",secPortugal:"Portugal Legacy",secMoments:"Iconic Moments",secDash:"Records Dashboard",secGallery:"Photo Gallery",secSources:"Official sources",
+updated:"Last updated",verify:"Needs verification",checked:"Checked",source:"Source",asOf:"As of",clickHint:"Select a card for details.",langBtn:"العربية",ph:"Placeholder",
+fClub:"Club",fCountry:"Country",fEra:"Era",all:"All",shown:"Showing",of:"of",
+imgNote:"Artwork on this page is generated placeholder art, not photography. Photos should only be added from official club, federation or competition media authorized for reuse, or images you hold a licence for.",
+disclaimer:"CR7 — THE LEGACY is an independent fan project. It is not affiliated with or endorsed by Cristiano Ronaldo, any club, federation or league."},
+ar:{skip:"تخطَّ إلى المحتوى",menu:"القائمة",close:"إغلاق",heroEyebrow:"تحية من جمهور مستقل",heroSub:"من فونشال إلى أكبر مسارح العالم — مسيرة تُروى عبر أنديتها وبطولاتها ولياليها الخالدة.",explore:"اكتشف الإرث",
+secTimeline:"المسيرة المهنية",secTrophies:"معرض البطولات",secPortugal:"إرث البرتغال",secMoments:"اللحظات الخالدة",secDash:"لوحة الأرقام القياسية",secGallery:"معرض الصور",secSources:"المصادر الرسمية",
+updated:"آخر تحديث",verify:"بحاجة إلى تحقق",checked:"تم التحقق",source:"المصدر",asOf:"بتاريخ",clickHint:"اضغط على البطاقة لعرض التفاصيل.",langBtn:"English",ph:"صورة مؤقتة",
+fClub:"النادي",fCountry:"الدولة",fEra:"المرحلة",all:"الكل",shown:"عرض",of:"من",
+imgNote:"الرسومات في هذه الصفحة أعمال فنية مولّدة بديلة وليست صوراً فوتوغرافية. تُضاف الصور فقط من الوسائط الرسمية للأندية والاتحادات والمسابقات المسموح بإعادة استخدامها، أو صور تملك ترخيصها.",
+disclaimer:"موقع «CR7 — THE LEGACY» مشروع جماهيري مستقل، وليس تابعاً أو مدعوماً من كريستيانو رونالدو أو أي نادٍ أو اتحاد أو دوري."}},
+nav:[["timeline","secTimeline"],["trophies","secTrophies"],["portugal","secPortugal"],["moments","secMoments"],["stats","secDash"],["gallery","secGallery"]],
+L:{club:{scp:{en:"Sporting CP",ar:"سبورتينغ"},mu:{en:"Manchester United",ar:"مانشستر يونايتد"},rm:{en:"Real Madrid",ar:"ريال مدريد"},juv:{en:"Juventus",ar:"يوفنتوس"},nas:{en:"Al-Nassr",ar:"النصر"},por:{en:"Portugal",ar:"البرتغال"}},
+country:{pt:{en:"Portugal",ar:"البرتغال"},en:{en:"England",ar:"إنجلترا"},es:{en:"Spain",ar:"إسبانيا"},it:{en:"Italy",ar:"إيطاليا"},sa:{en:"Saudi Arabia",ar:"السعودية"}},
+era:{e00:{en:"2000s",ar:"الألفينات"},e10:{en:"2010s",ar:"العقد 2010"},e20:{en:"2020s",ar:"العقد 2020"}}},
+timeline:[
+{club:{en:"Sporting CP",ar:"سبورتينغ لشبونة"},art:"SCP",years:"1995–2003",src:W,text:{en:"Joined the academy as a boy and broke into the first team in 2002–03 before moving to England.",ar:"انضم إلى أكاديمية النادي صغيراً وبرز مع الفريق الأول موسم 2002–03 قبل الانتقال إلى إنجلترا."}},
+{club:{en:"Manchester United (first spell)",ar:"مانشستر يونايتد (الفترة الأولى)"},art:"MUFC",years:"2003–2009",src:W,text:{en:"Premier League titles, the 2008 Champions League and his first Ballon d’Or (2008).",ar:"ألقاب الدوري الإنجليزي ودوري أبطال أوروبا 2008 وأول كرة ذهبية (2008)."}},
+{club:{en:"Real Madrid",ar:"ريال مدريد"},art:"RMA",years:"2009–2018",src:W,text:{en:"Four Champions League titles with Real Madrid and the club’s all-time leading scorer.",ar:"أربعة ألقاب في دوري أبطال أوروبا مع ريال مدريد، وهداف النادي التاريخي."}},
+{club:{en:"Juventus",ar:"يوفنتوس"},art:"JUV",years:"2018–2021",src:W,text:{en:"Serie A champion in 2019 and 2020.",ar:"بطل الدوري الإيطالي عامي 2019 و2020."}},
+{club:{en:"Manchester United (second spell)",ar:"مانشستر يونايتد (الفترة الثانية)"},art:"MUFC II",years:"2021–2022",src:W,text:{en:"Returned to Old Trafford in 2021 and left in November 2022.",ar:"عاد إلى أولد ترافورد عام 2021 وغادر في نوفمبر 2022."}},
+{club:{en:"Al-Nassr",ar:"النصر"},art:"NAS",years:"2023–",src:W,text:{en:"Joined the Saudi club in the 2022–23 winter window. His current contract status is not verified here.",ar:"انضم إلى النادي السعودي في فترة الانتقالات الشتوية 2022–23. وضع عقده الحالي غير مؤكد هنا."}},
+{club:{en:"Portugal",ar:"منتخب البرتغال"},art:"POR",years:"2003–",src:"https://www.fpf.pt",text:{en:"International debut in 2003; captain and the national team’s central figure for two decades.",ar:"بدأ مسيرته الدولية عام 2003، وهو قائد المنتخب ومحوره لعقدين."}}],
+trophies:[
+{count:"5",art:"BALLON",title:{en:"Ballon d’Or",ar:"الكرة الذهبية"},years:"2008 · 2013 · 2014 · 2016 · 2017",src:"https://www.francefootball.fr",status:"verify",text:{en:"Individual award won five times.",ar:"جائزة فردية فاز بها خمس مرات."}},
+{count:"5",art:"UCL",title:{en:"UEFA Champions League",ar:"دوري أبطال أوروبا"},years:"2008 · 2014 · 2016 · 2017 · 2018",src:U,status:"verify",text:{en:"One with Manchester United, four with Real Madrid.",ar:"واحد مع مانشستر يونايتد وأربعة مع ريال مدريد."}},
+{count:"1",art:"EURO",title:{en:"UEFA Euro",ar:"كأس أمم أوروبا"},years:"2016",src:U,status:"verify",text:{en:"Captained Portugal to the title in France.",ar:"قاد البرتغال إلى اللقب في فرنسا."}},
+{count:"2",art:"UNL",title:{en:"UEFA Nations League",ar:"دوري الأمم الأوروبية"},years:"2019 · 2025",src:AFP,status:"ok",text:{en:"Portugal were the first nation to win the competition twice.",ar:"كانت البرتغال أول منتخب يفوز بالبطولة مرتين."}},
+{count:"3",art:"EPL",title:{en:"Premier League",ar:"الدوري الإنجليزي"},years:"2007 · 2008 · 2009",src:W,status:"verify",text:{en:"With Manchester United.",ar:"مع مانشستر يونايتد."}},
+{count:"2",art:"LIGA",title:{en:"La Liga",ar:"الدوري الإسباني"},years:"2012 · 2017",src:W,status:"verify",text:{en:"With Real Madrid.",ar:"مع ريال مدريد."}},
+{count:"2",art:"A",title:{en:"Serie A",ar:"الدوري الإيطالي"},years:"2019 · 2020",src:W,status:"verify",text:{en:"With Juventus.",ar:"مع يوفنتوس."}}],
+portugal:[
+{count:"2016",art:"EURO16",title:{en:"UEFA Euro 2016",ar:"يورو 2016"},years:"France",src:U,status:"verify",text:{en:"Portugal’s first major men’s title; the final was won 1–0 after extra time.",ar:"أول لقب كبير للبرتغال بين الرجال؛ وحُسم النهائي 1–0 بعد وقت إضافي."}},
+{count:"2019",art:"UNL19",title:{en:"Nations League",ar:"دوري الأمم"},years:"2018–19",src:U,status:"verify",text:{en:"Winners of the inaugural UEFA Nations League.",ar:"أبطال النسخة الأولى من دوري الأمم الأوروبية."}},
+{count:"2025",art:"UNL25",title:{en:"Nations League",ar:"دوري الأمم"},years:"2024–25",src:AFP,status:"ok",text:{en:"Beat Spain on penalties (2–2, 5–3) in Munich on 8 June 2025. Ronaldo scored the equaliser.",ar:"تغلبت على إسبانيا بركلات الترجيح (2–2، 5–3) في ميونخ يوم 8 يونيو 2025، وسجّل رونالدو هدف التعادل."}}],
+matches:[
+{art:"MOSCOW",title:{en:"Champions League Final 2008",ar:"نهائي دوري الأبطال 2008"},date:{en:"21 May 2008 · Moscow",ar:"21 مايو 2008 · موسكو"},src:U,status:"verify",text:{en:"Scored in the 1–1 draw; United won on penalties.",ar:"سجّل في التعادل 1–1 وفاز يونايتد بركلات الترجيح."}},
+{art:"EURO16",title:{en:"Euro 2016 Final",ar:"نهائي يورو 2016"},date:{en:"10 July 2016 · Paris",ar:"10 يوليو 2016 · باريس"},src:U,status:"verify",text:{en:"Portugal beat France 1–0 after extra time.",ar:"فازت البرتغال على فرنسا 1–0 بعد الوقت الإضافي."}},
+{art:"BICYCLE",title:{en:"Bicycle kick vs Juventus",ar:"المقصية في مرمى يوفنتوس"},date:{en:"3 April 2018 · Turin",ar:"3 أبريل 2018 · تورينو"},src:U,status:"verify",text:{en:"Champions League quarter-final: Real Madrid 3–0 Juventus.",ar:"ربع نهائي دوري الأبطال: ريال مدريد 3–0 يوفنتوس."}},
+{art:"SOCHI",title:{en:"Spain 3–3 Portugal, World Cup 2018",ar:"إسبانيا 3–3 البرتغال، مونديال 2018"},date:{en:"15 June 2018 · Sochi",ar:"15 يونيو 2018 · سوتشي"},src:"https://www.fifa.com",status:"verify",text:{en:"A hat-trick, including a late free kick to level the match.",ar:"هاتريك، بينها ركلة حرة في الدقائق الأخيرة عادل بها النتيجة."}},
+{art:"MUNICH",title:{en:"Nations League Final 2025",ar:"نهائي دوري الأمم 2025"},date:{en:"8 June 2025 · Munich",ar:"8 يونيو 2025 · ميونخ"},src:AFP,status:"ok",text:{en:"Portugal 2–2 Spain, won 5–3 on penalties. Ronaldo equalised in the 61st minute.",ar:"البرتغال 2–2 إسبانيا، وفازت 5–3 بركلات الترجيح. سجّل رونالدو هدف التعادل في الدقيقة 61."}}],
+stats:[
+{value:"2",label:{en:"Nations League titles (Portugal, record)",ar:"ألقاب دوري الأمم (رقم قياسي للبرتغال)"},asOf:"2025-06-08",src:AFP,status:"ok"},
+{value:"143",label:{en:"Goals for Portugal",ar:"أهداف مع البرتغال"},asOf:"2026-05",src:"https://theanalyst.com/players/13574/cristiano-ronaldo/national",status:"verify",note:{en:"Figure before the 2026 World Cup. Newer, unconfirmed reports cite 146; sources disagree.",ar:"رقم قبل مونديال 2026. تقارير أحدث غير مؤكدة تذكر 146؛ والمصادر متضاربة."}},
+{value:"226",label:{en:"Caps for Portugal",ar:"مباريات مع البرتغال"},asOf:"2026-05",src:"https://theanalyst.com/players/13574/cristiano-ronaldo/national",status:"verify",note:{en:"Same caveat: newer reports cite 233.",ar:"التحفظ نفسه: تقارير أحدث تذكر 233."}},
+{value:"900+",label:{en:"Career goals (reported milestone)",ar:"أهداف في المسيرة (إنجاز وفق التقارير)"},asOf:"2024-09",src:TM,status:"verify",note:{en:"Current total not stated: sources found conflict (830–952).",ar:"الإجمالي الحالي غير مذكور: المصادر المتاحة متضاربة (830–952)."}},
+{value:"140",label:{en:"Champions League goals (all-time record)",ar:"أهداف دوري الأبطال (رقم قياسي)"},asOf:"2022",src:U,status:"verify"},
+{value:"450",label:{en:"Real Madrid goals in 438 games (club record)",ar:"أهداف مع ريال مدريد في 438 مباراة (رقم النادي)"},asOf:"2018",src:W,status:"verify"}],
+gallery:[
+{art:"SCP",club:"scp",country:"pt",era:"e00",cap:{en:"First steps at Sporting CP",ar:"الخطوات الأولى مع سبورتينغ"}},
+{art:"MUFC",club:"mu",country:"en",era:"e00",cap:{en:"Manchester United, first spell",ar:"مانشستر يونايتد، الفترة الأولى"}},
+{art:"2008",club:"mu",country:"en",era:"e00",cap:{en:"The 2008 European night",ar:"ليلة أوروبا 2008"}},
+{art:"RMA",club:"rm",country:"es",era:"e10",cap:{en:"The Real Madrid years",ar:"سنوات ريال مدريد"}},
+{art:"BERNABEU",club:"rm",country:"es",era:"e10",cap:{en:"Champions League nights in Madrid",ar:"ليالي دوري الأبطال في مدريد"}},
+{art:"JUV",club:"juv",country:"it",era:"e10",cap:{en:"The Turin chapter",ar:"فصل تورينو"}},
+{art:"EURO16",club:"por",country:"pt",era:"e10",cap:{en:"Euro 2016 celebrations",ar:"احتفالات يورو 2016"}},
+{art:"OLD TRAFFORD",club:"mu",country:"en",era:"e20",cap:{en:"Return to Old Trafford",ar:"العودة إلى أولد ترافورد"}},
+{art:"NAS",club:"nas",country:"sa",era:"e20",cap:{en:"Al-Nassr in Riyadh",ar:"النصر في الرياض"}},
+{art:"UNL25",club:"por",country:"pt",era:"e20",cap:{en:"Nations League 2025",ar:"دوري الأمم 2025"}}],
+sources:[["UEFA",U],["FIFA","https://www.fifa.com"],["FPF — Portuguese Football Federation","https://www.fpf.pt"],["France Football — Ballon d’Or","https://www.francefootball.fr"],["Transfermarkt",TM],["Opta Analyst","https://theanalyst.com/players/13574/cristiano-ronaldo/national"],["Wikipedia",W]]};
+
+(()=>{
+const $=s=>document.querySelector(s);
+let lang="en";try{lang=localStorage.getItem("cr7-lang")||(navigator.language.startsWith("ar")?"ar":"en")}catch(e){}
+const tr=k=>D.i18n[lang][k],pk=o=>o[lang],esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function art(seed,label){let h=0;for(const c of seed+label)h=(h*31+c.charCodeAt(0))>>>0;const r=n=>(h=(h*1103515245+12345)>>>0,h%n);let g="";
+for(let i=0;i<6;i++)g+=`<circle cx="${r(800)}" cy="${r(500)}" r="${50+r(220)}" fill="none" stroke="#C8A85A" stroke-opacity=".${1+r(4)}"/>`;
+g+=`<path d="M0 ${300+r(120)}Q400 ${150+r(150)} 800 ${280+r(120)}" fill="none" stroke="#C8A85A" stroke-opacity=".35"/>`;
+const fs=label.length>5?90:label.length>3?130:190;
+return "data:image/svg+xml,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#211b0f"/><stop offset="1" stop-color="#090909"/></linearGradient></defs><rect width="800" height="500" fill="url(#g)"/>${g}<text x="400" y="${250+fs/3}" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="${fs}" font-weight="800" fill="#C8A85A" fill-opacity=".22">${label}</text></svg>`)}
+const Img=(it,alt)=>`<img src="${it.img||art(it.art,it.art)}" data-a="${esc(it.art)}" alt="${esc(alt)}" loading="lazy" decoding="async" width="800" height="500">`;
+const Ph=(it,alt)=>`<div class="ph">${Img(it,alt)}${it.count?`<em>${esc(it.count)}</em>`:""}${it.img?"":`<span class="pl">${tr("ph")}</span>`}</div>`;
+const Badge=it=>it.status==="ok"?`<small class="ok">✓ ${tr("checked")} · ${D.updated}</small>`:`<small class="flag">⚠ ${tr("verify")}</small>`;
+const Src=it=>`<small><a href="${it.src}" target="_blank" rel="noopener">${tr("source")} ↗</a></small>`;
+const Card=(it,i)=>{const t=pk(it.title);return `<button type="button" data-i="${i}" class="card reveal">${Ph(it,t)}<div class="cb"><h3>${esc(t)}</h3><span>${esc(it.years)}</span>${Badge(it)}</div></button>`};
+function fill(id,list){$(id).innerHTML=list.map(Card).join("");$(id).querySelectorAll("button").forEach(b=>b.onclick=()=>openDlg(list[b.dataset.i]))}
+function openDlg(it){$("#dlg-t").textContent=pk(it.title);$("#dlg-d").textContent=[it.years,pk(it.text)].join(" — ");const a=$("#dlg-s");a.href=it.src;a.textContent=tr("source")+" ↗";$("#dlg").showModal()}
+$("#dlg-x").onclick=()=>$("#dlg").close();$("#dlg").addEventListener("click",e=>{if(e.target.id==="dlg")e.target.close()});
+
+let tl=0;
+function renderTimeline(){const T=D.timeline,c=T[tl];
+$("#timeline-box").innerHTML=`<div class="tabs" role="tablist">${T.map((t,i)=>`<button role="tab" id="tab${i}" aria-selected="${i===tl}" aria-controls="tp" tabindex="${i===tl?0:-1}" data-i="${i}">${esc(t.years)}<br>${esc(pk(t.club))}</button>`).join("")}</div>
+<div class="tl" id="tp" role="tabpanel" aria-labelledby="tab${tl}">${Ph(c,pk(c.club))}<div class="tx"><div class="yrs">${esc(c.years)}</div><h3>${esc(pk(c.club))}</h3><p>${esc(pk(c.text))}</p><a href="${c.src}" target="_blank" rel="noopener">${tr("source")} ↗</a></div></div>`;
+const tabs=[...document.querySelectorAll(".tabs button")];
+tabs.forEach((b,i)=>{b.onclick=()=>{tl=i;renderTimeline();$("#tab"+i).focus()};
+b.onkeydown=e=>{const s={ArrowRight:lang==="ar"?-1:1,ArrowLeft:lang==="ar"?1:-1}[e.key];if(s){e.preventDefault();tl=(i+s+tabs.length)%tabs.length;renderTimeline();$("#tab"+tl).focus()}}})}
+
+const F={club:"all",country:"all",era:"all"};
+function renderGallery(){
+$("#filters").innerHTML=["club","country","era"].map(k=>`<div class="chips" role="group" aria-label="${tr("f"+k[0].toUpperCase()+k.slice(1))}"><span>${tr("f"+k[0].toUpperCase()+k.slice(1))}</span>${["all",...Object.keys(D.L[k])].map(v=>`<button type="button" data-k="${k}" data-v="${v}" aria-pressed="${F[k]===v}">${v==="all"?tr("all"):esc(pk(D.L[k][v]))}</button>`).join("")}</div>`).join("");
+$("#filters").querySelectorAll("button").forEach(b=>b.onclick=()=>{F[b.dataset.k]=b.dataset.v;renderGallery();observe()});
+const list=D.gallery.filter(g=>Object.keys(F).every(k=>F[k]==="all"||g[k]===F[k]));
+$("#count").textContent=`${tr("shown")} ${list.length} ${tr("of")} ${D.gallery.length}`;
+$("#gallery-grid").innerHTML=list.map(g=>`<figure class="card reveal in" style="cursor:default">${Ph(g,pk(g.cap))}<figcaption class="cb"><h3>${esc(pk(g.cap))}</h3><span>${esc(pk(D.L.club[g.club]))} · ${esc(pk(D.L.country[g.country]))} · ${esc(pk(D.L.era[g.era]))}</span></figcaption></figure>`).join("");
+fb()}
+const fb=()=>document.querySelectorAll("img[data-a]").forEach(i=>i.onerror=()=>{i.onerror=null;i.src=art(i.dataset.a,i.dataset.a)});
+
+function render(){
+document.documentElement.lang=lang;document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+document.querySelectorAll("[data-i18n]").forEach(e=>e.textContent=tr(e.dataset.i18n));
+document.querySelectorAll("[data-i18n-aria]").forEach(e=>e.setAttribute("aria-label",tr(e.dataset.i18nAria)));
+$("#lang").textContent=tr("langBtn");$("#lang").lang=lang==="ar"?"en":"ar";
+$("#menu").innerHTML=D.nav.map(([id,k])=>`<a href="#${id}">${tr(k)}</a>`).join("");
+$("#updated").textContent=D.updated;$("#updated").dateTime=D.updated;
+$("#hero-bg").style.setProperty("--hero",`url("${art("hero","7")}")`);
+renderTimeline();fill("#trophies-grid",D.trophies);fill("#portugal-grid",D.portugal);
+$("#moments-grid").innerHTML=D.matches.map(m=>{const t=pk(m.title);return `<article class="card reveal">${Ph(m,t)}<div class="cb"><h3>${esc(t)}</h3><span>${esc(pk(m.date))}</span><p>${esc(pk(m.text))}</p>${Badge(m)}${Src(m)}</div></article>`}).join("");
+$("#stats-grid").innerHTML=D.stats.map(s=>`<div class="card reveal"><b>${esc(s.value)}</b><h3>${esc(pk(s.label))}</h3><small>${tr("asOf")} ${esc(s.asOf)}</small>${s.note?`<small>${esc(pk(s.note))}</small>`:""}${Badge(s)}${Src(s)}</div>`).join("");
+$("#sources").innerHTML=D.sources.map(([n,u])=>`<li><a href="${u}" target="_blank" rel="noopener">${n}</a></li>`).join("");
+renderGallery();fb();observe()}
+const io="IntersectionObserver"in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.08}):null;
+const observe=()=>document.querySelectorAll(".reveal:not(.in)").forEach(e=>io?io.observe(e):e.classList.add("in"));
+$("#lang").onclick=()=>{lang=lang==="ar"?"en":"ar";try{localStorage.setItem("cr7-lang",lang)}catch(e){}render()};
+const bg=$("#burger"),mn=$("#menu"),close=()=>{mn.classList.remove("open");bg.setAttribute("aria-expanded",false)};
+bg.onclick=()=>{bg.setAttribute("aria-expanded",mn.classList.toggle("open"))};
+mn.onclick=e=>{if(e.target.tagName==="A")close()};document.addEventListener("keydown",e=>{if(e.key==="Escape")close()});
+render();
+})();
+</script>
+</body>
+</html>
